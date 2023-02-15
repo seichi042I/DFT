@@ -37,7 +37,7 @@ def _dft(
 def dft(
     data: np.ndarray,
     sampling_rate: int,
-    padding: int,
+    padding: int = 0,
 ) -> Tuple[np.ndarray, np.ndarray]:
     if padding > 0:
         data = np.concatenate([data, np.array([0]*padding)])
